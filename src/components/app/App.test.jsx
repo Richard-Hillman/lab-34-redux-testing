@@ -5,6 +5,9 @@ import App from './App';
 
 describe('color picker change and record undo and redo ', () => {
   afterEach(() => cleanup());
+
+  // -----------------------------------------------
+
   it('renders App', () => {
     const { asFragment } = render(<App />);
     expect(asFragment()).toMatchSnapshot();
