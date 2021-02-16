@@ -31,4 +31,31 @@ describe('color picker change and record undo and redo ', () => {
 
   });
 
+  // ------------------------------------------------
+
+
+  it('undoes the color ', async() => {
+    render(<App />);
+
+    const colorPicker = await screen.findByLabelText('Current Color');
+    const colorDisplay = await screen.findByTestId('frig');
+    const colorUndo = await screen.findByText('undo');
+
+
+    fireEvent.change(colorPicker, {
+      target:{
+        value: '#00FF00'
+      }
+    });
+
+    fireEvent.click(colorUndo);
+    
+    return waitFor(() => {
+      expect(colorPicker).toHaveValue('#ff0000');
+      expect(colorDisplay.style.backgroundColor).toBe('rgb(255, 0, 0)');
+    });
+
+  });
+
+
 });
