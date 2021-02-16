@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`color picker change and record undo and redo  renders App 1`] = `
+<DocumentFragment>
+  <button>
+    undo
+  </button>
+  <button>
+    redo
+  </button>
+  <label
+    for="CURRENT_COLOR_CHANGE"
+  >
+    Current Color
+  </label>
+  <input
+    id="CURRENT_COLOR_CHANGE"
+    type="color"
+    value="#FF0000"
+  />
+  <div
+    data-testid="frig"
+    style="background-color: rgb(255, 0, 0); width: 10rem; height: 10rem;"
+  />
+</DocumentFragment>
+`;
