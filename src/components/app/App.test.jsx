@@ -36,14 +36,12 @@ describe('color picker change and record undo and redo ', () => {
 
   // ------------------------------------------------
 
-
   it('undoes the color ', async() => {
     render(<App />);
 
     const colorPicker = await screen.findByLabelText('Current Color');
     const colorDisplay = await screen.findByTestId('frig');
     const colorUndo = await screen.findByText('undo');
-
 
     fireEvent.change(colorPicker, {
       target:{
